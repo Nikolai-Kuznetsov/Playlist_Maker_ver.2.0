@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="text_size_16px">16sp</dimen>
+    <dimen name="text_size_22px">22sp</dimen>
+    <dimen name="space_between_icon_and_text">8sp</dimen>
+    <dimen name="space_between_buttons">8dp</dimen>
+    <dimen name="activity_settings_padding_start">18dp</dimen>
+
+</resources>

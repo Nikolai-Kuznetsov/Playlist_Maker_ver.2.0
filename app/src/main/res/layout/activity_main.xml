@@ -1,19 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:id="@+id/main"
+    tools:context=".MainActivity"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:background="@color/blue"
+    android:padding="16dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_22px"
+        android:fontFamily="@font/ys_display_medium"
+        android:paddingTop="4dp"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="22dp"
+        android:layout_marginBottom="6dp"
+        >
+
+        <Button
+            android:id="@+id/button_search"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            app:cornerRadius="16dp"
+            android:text="@string/search"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ys_display_medium"
+            android:textSize="@dimen/text_size_22px"
+
+            android:foreground="?attr/selectableItemBackground"
+            android:textAllCaps="false"
+
+
+            app:icon="@drawable/search"
+            app:iconGravity="textStart"
+            app:iconTint="@color/black"
+            app:iconPadding="@dimen/space_between_icon_and_text"
+            />
+
+        <Button
+            android:id="@+id/button_library"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            app:cornerRadius="16dp"
+            android:layout_marginTop="@dimen/space_between_buttons"
+
+            android:text="@string/media_library"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ys_display_medium"
+            android:textSize="@dimen/text_size_22px"
+
+            android:foreground="?attr/selectableItemBackground"
+            android:textAllCaps="false"
+
+            app:icon="@drawable/library"
+            app:iconGravity="textStart"
+            app:iconTint="@color/black"
+            app:iconPadding="@dimen/space_between_icon_and_text"
+
+            />
+
+        <Button
+            android:id="@+id/button_settings"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/white"
+            app:cornerRadius="16dp"
+            android:layout_marginTop="@dimen/space_between_buttons"
+
+            android:text="@string/settings"
+            android:textColor="@color/black"
+            android:fontFamily="@font/ys_display_medium"
+            android:textSize="@dimen/text_size_22px"
+
+            android:foreground="?attr/selectableItemBackground"
+            android:textAllCaps="false"
+
+            app:icon="@drawable/settings"
+            app:iconGravity="textStart"
+            app:iconTint="@color/black"
+            app:iconPadding="@dimen/space_between_icon_and_text"
+
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
