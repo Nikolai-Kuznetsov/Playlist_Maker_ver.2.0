@@ -6,5 +6,8 @@
     <dimen name="space_between_icon_and_text">8sp</dimen>
     <dimen name="space_between_buttons">8dp</dimen>
     <dimen name="activity_settings_padding_start">18dp</dimen>
+    <dimen name="activity_settings_padding">20dp</dimen>
+    <dimen name="corner_radius_16dp">16dp</dimen>
+    <dimen name="padding_16dp">16dp</dimen>
 
 </resources>

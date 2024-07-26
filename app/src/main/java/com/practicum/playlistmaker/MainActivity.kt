@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 //           }
 //       }
 //
-//        buttonSettings.setOnClickListener(clickOnbuttonSettings)
+
 
     }
 }

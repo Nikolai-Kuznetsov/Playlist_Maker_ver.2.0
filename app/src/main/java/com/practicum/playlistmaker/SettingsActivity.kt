@@ -5,6 +5,7 @@ import android.content.Intent
 import android.media.Image
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,7 +16,7 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        val backButton = findViewById<ImageView>(R.id.back)
+        val backButton = findViewById<LinearLayout>(R.id.settings_back)
 
         backButton.setOnClickListener {
             finish()
