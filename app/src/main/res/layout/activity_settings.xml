@@ -26,7 +26,6 @@
 
         <ImageView
             android:src="@drawable/back"
-
             app:tint="?attr/colorOnSecondary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,18 +61,14 @@
             android:textSize="@dimen/text_size_16px"
             android:fontFamily="@font/ys_display_regular"
             android:textColor="?attr/colorOnSecondary"
-            android:padding="@dimen/activity_settings_padding"
-            android:paddingStart="@dimen/activity_settings_padding_start"
+            android:padding="@dimen/activity_settings_padding_20dp"
+            android:paddingStart="@dimen/activity_settings_padding_start_18dp"
 
             />
 
         <Switch
             tools:ignore="UseSwitchCompatOrMaterialXml"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/activity_settings_padding"
-            android:paddingEnd="7dp"
-            app:tint="@color/grey"
+            style="@style/settingsSwitch"
 
 
             >
@@ -82,10 +77,8 @@
     </FrameLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="?attr/selectableItemBackground"
+        android:id="@+id/share_app"
+        style="@style/linearLayoutMenuSettings"
         >
 
 
@@ -97,73 +90,41 @@
 
         <ImageView
             android:src="@drawable/share"
-
-            app:tint="@color/grey"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/activity_settings_padding"
+            style="@style/settingsIcon"
 
             />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="?attr/selectableItemBackground"
+        android:id="@+id/email_for_support"
+        style="@style/linearLayoutMenuSettings"
         >
 
         <TextView
             android:text="@string/call_for_support"
-
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textColor="?attr/colorOnSecondary"
-            android:fontFamily="@font/ys_display_regular"
-            android:textSize="@dimen/text_size_16px"
-            android:padding="@dimen/activity_settings_padding"
-            android:paddingStart="@dimen/activity_settings_padding_start"
+            style="@style/settingsText"
             />
 
         <ImageView
             android:src="@drawable/support"
-
-            app:tint="@color/grey"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/activity_settings_padding"
+            style="@style/settingsIcon"
             />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="?attr/selectableItemBackground"
+        android:id="@+id/terms_of_use"
+        style="@style/linearLayoutMenuSettings"
         >
 
         <TextView
             android:text="@string/terms_of_use"
-
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textColor="?attr/colorOnSecondary"
-            android:fontFamily="@font/ys_display_regular"
-            android:textSize="@dimen/text_size_16px"
-            android:padding="@dimen/activity_settings_padding"
-            android:paddingStart="@dimen/activity_settings_padding_start"
+            style="@style/settingsText"
             />
 
         <ImageView
             android:src="@drawable/arrow_forward"
-
-            app:tint="@color/grey"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/activity_settings_padding"
+            style="@style/settingsIcon"
             />
 
     </LinearLayout>
