@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toolbar
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,7 +19,7 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        val backButton = findViewById<LinearLayout>(R.id.settings_back)
+        val backButton = findViewById<Toolbar>(R.id.settings_header)
         val shareAppButton = findViewById<LinearLayout>(R.id.share_app)
         val supportButton = findViewById<LinearLayout>(R.id.email_for_support)
         val termsOfUseButton = findViewById<LinearLayout>(R.id.terms_of_use)
