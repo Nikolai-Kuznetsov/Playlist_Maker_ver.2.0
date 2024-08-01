@@ -1,18 +1,17 @@
 package com.practicum.playlistmaker
 
-import android.annotation.SuppressLint
+
 import android.content.Intent
-import android.media.Image
+
 import android.net.Uri
 import android.os.Bundle
-import android.widget.ImageView
+
 import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toolbar
-import androidx.activity.enableEdgeToEdge
+
+import androidx.appcompat.widget.Toolbar
+
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
