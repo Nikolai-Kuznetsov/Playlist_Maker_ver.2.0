@@ -42,6 +42,8 @@
         <item name="android:paddingEnd">7dp</item>
         <item name="tint">@color/white</item>
 
+
+
     </style>
 
 </resources>

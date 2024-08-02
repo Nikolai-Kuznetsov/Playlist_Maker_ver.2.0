@@ -1,12 +1,15 @@
 package com.practicum.playlistmaker
 
 
+import android.app.Activity
+import android.content.ActivityNotFoundException
 import android.content.Intent
 
 import android.net.Uri
 import android.os.Bundle
 
 import android.widget.LinearLayout
+import android.widget.Toast
 
 import androidx.appcompat.widget.Toolbar
 
@@ -32,7 +35,11 @@ class SettingsActivity : AppCompatActivity() {
                 type = "text/plain"
                 putExtra(Intent.EXTRA_TEXT, "https://practicum.yandex.ru/android-developer/")
             }
-            startActivity(shareIntent)
+            try {
+                startActivity(Intent.createChooser(shareIntent, "Делимся счастьем!"))
+            } catch (e: ActivityNotFoundException) {
+                Toast.makeText(this, "У вас не установлен ессенджер:(\n\nУстановите любой мессенджер, чтобы поделиться нашим приложением.", Toast.LENGTH_LONG).show()
+            }
         }
 
         supportButton.setOnClickListener {
@@ -47,15 +54,23 @@ class SettingsActivity : AppCompatActivity() {
                     "Спасибо разработчикам и разработчицам за крутое приложение!"
                 )
             }
+            try {
                 startActivity(emailIntent)
+            } catch (e: ActivityNotFoundException) {
+                Toast.makeText(this, "У вас не установлен почтовый клиент:(\n\nУстановите любой почтовый клиент, чтобы написать в службу поддержки.", Toast.LENGTH_LONG).show()
+            }
         }
 
 
         termsOfUseButton.setOnClickListener {
-            val termsOfUseIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://yandex.ru/legal/practicum_offer/"))
-                startActivity(intent)
+            val termsOfUseIntent =
+                Intent(Intent.ACTION_VIEW, Uri.parse("https://yandex.ru/legal/practicum_offer/"))
         }
+        try {
 
-
+                startActivity(intent)
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(this, "У вас не установлен браузер:(\\n\\nУстановите любой браузер, чтобы прочитать пользовательское соглашение.", Toast.LENGTH_LONG).show()
+        }
     }
 }
