@@ -48,15 +48,6 @@
 
 </style>
 
-<style name="settingsSwitch">
-
-    <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:padding">@dimen/activity_settings_padding_20dp</item>
-    <item name="android:paddingEnd">7dp</item>
-    <item name="tint">@color/grey</item>
-
-</style>
 
 <style name="linearLayoutMenuSettings">
 
@@ -73,6 +64,12 @@
         <item name="titleTextColor">@color/black</item>
         <item name="android:fontFamily">@font/ys_display_medium</item>
         <item name="android:textFontWeight">400</item>
+
+        <item name="navigationIconTint">@color/navigation_icon_color</item>
+
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
 
     </style>
 

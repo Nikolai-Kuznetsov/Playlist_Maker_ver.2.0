@@ -6,4 +6,10 @@
     <color name="blue">#3772E7</color>
     <color name="grey">#AEAFB4</color>
 
+    <color name="navigation_icon_color_light">#1A1B22</color>
+    <color name="navigation_icon_color_night">#FFFFFFFF</color>
+
+    <color name="switch_thumb_checked_light">#FFFFFFFF</color>
+    <color name="switch_thumb_unchecked_light">#FFFFFFFF</color>
+
 </resources>

@@ -67,7 +67,6 @@ class SettingsActivity : AppCompatActivity() {
                 Intent(Intent.ACTION_VIEW, Uri.parse("https://yandex.ru/legal/practicum_offer/"))
         }
         try {
-
                 startActivity(intent)
         } catch (e: ActivityNotFoundException) {
             Toast.makeText(this, "У вас не установлен браузер:(\\n\\nУстановите любой браузер, чтобы прочитать пользовательское соглашение.", Toast.LENGTH_LONG).show()

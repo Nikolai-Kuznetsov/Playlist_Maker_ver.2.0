@@ -15,12 +15,11 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/settings_header"
+
         app:navigationIcon="@drawable/back"
+
         app:title="@string/settings"
         style="@style/screen_header"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
         />
 
     <FrameLayout
@@ -37,23 +36,22 @@
             android:textSize="@dimen/text_size_16px"
             android:fontFamily="@font/ys_display_regular"
             android:textFontWeight="400"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnSecondary"
             android:padding="@dimen/activity_settings_padding_20dp"
             android:paddingStart="@dimen/activity_settings_padding_start_18dp"
 
             />
 
         <Switch
+
             tools:ignore="UseSwitchCompatOrMaterialXml"
             style="@style/settingsSwitch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/activity_settings_padding_20dp"
             android:paddingEnd="7dp"
-
-
-
             >
+
         </Switch>
 
     </FrameLayout>
