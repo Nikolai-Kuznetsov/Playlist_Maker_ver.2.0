@@ -1,20 +1,13 @@
 package com.practicum.playlistmaker
 
-
-import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
-
 import android.net.Uri
 import android.os.Bundle
-
 import android.widget.LinearLayout
 import android.widget.Toast
-
 import androidx.appcompat.widget.Toolbar
-
 import androidx.appcompat.app.AppCompatActivity
-
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,10 +19,12 @@ class SettingsActivity : AppCompatActivity() {
         val supportButton = findViewById<LinearLayout>(R.id.email_for_support)
         val termsOfUseButton = findViewById<LinearLayout>(R.id.terms_of_use)
 
-        backButton.setOnClickListener {
+        // Исправление 1: Замена setOnClickListener на setNavigationOnClickListener для корректной работы кнопки "Назад"
+        backButton.setNavigationOnClickListener {
             finish()
         }
 
+        // Обработчик нажатия для кнопки "Поделиться приложением"
         shareAppButton.setOnClickListener {
             val shareIntent = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
@@ -38,21 +33,16 @@ class SettingsActivity : AppCompatActivity() {
             try {
                 startActivity(Intent.createChooser(shareIntent, "Делимся счастьем!"))
             } catch (e: ActivityNotFoundException) {
-                Toast.makeText(this, "У вас не установлен ессенджер:(\n\nУстановите любой мессенджер, чтобы поделиться нашим приложением.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "У вас не установлен мессенджер:(\n\nУстановите любой мессенджер, чтобы поделиться нашим приложением.", Toast.LENGTH_LONG).show()
             }
         }
 
+        // Обработчик нажатия для кнопки "Поддержка"
         supportButton.setOnClickListener {
             val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
                 data = Uri.parse("mailto:NikolaiBhairava@yandex.ru")
-                putExtra(
-                    Intent.EXTRA_SUBJECT,
-                    "Сообщение разработчикам и разработчицам приложения Playlist Maker"
-                )
-                putExtra(
-                    Intent.EXTRA_TEXT,
-                    "Спасибо разработчикам и разработчицам за крутое приложение!"
-                )
+                putExtra(Intent.EXTRA_SUBJECT, "Сообщение разработчикам и разработчицам приложения Playlist Maker")
+                putExtra(Intent.EXTRA_TEXT, "Спасибо разработчикам и разработчицам за крутое приложение!")
             }
             try {
                 startActivity(emailIntent)
@@ -61,15 +51,14 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-
+        // Обработчик нажатия для кнопки "Условия использования"
         termsOfUseButton.setOnClickListener {
-            val termsOfUseIntent =
-                Intent(Intent.ACTION_VIEW, Uri.parse("https://yandex.ru/legal/practicum_offer/"))
-        }
-        try {
-                startActivity(intent)
-        } catch (e: ActivityNotFoundException) {
-            Toast.makeText(this, "У вас не установлен браузер:(\\n\\nУстановите любой браузер, чтобы прочитать пользовательское соглашение.", Toast.LENGTH_LONG).show()
+            val termsOfUseIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://yandex.ru/legal/practicum_offer/"))
+            try {
+                startActivity(termsOfUseIntent)
+            } catch (e: ActivityNotFoundException) {
+                Toast.makeText(this, "У вас не установлен браузер:(\n\nУстановите любой браузер, чтобы прочитать пользовательское соглашение.", Toast.LENGTH_LONG).show()
+            }
         }
     }
 }
