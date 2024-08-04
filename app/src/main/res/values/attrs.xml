@@ -5,6 +5,11 @@
 
         <attr name="navigationIconColor" format="color"/>
 
+        <attr name="colorSwitchTrackChecked" format="color"/>
+        <attr name="colorSwitchTrackUnchecked" format="color"/>
+        <attr name="colorSwitchThumbChecked" format="color"/>
+        <attr name="colorSwitchThumbUnchecked" format="color"/>
+
     </declare-styleable>
 
 </resources>

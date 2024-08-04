@@ -5,10 +5,16 @@
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
 
         <item name="colorPrimary">@color/black</item>
-        <item name="colorSecondary">@color/black</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/black</item>
         <item name="colorOnSecondary">@color/white</item>
+
         <item name="navigationIconColor">@color/navigation_icon_color_night</item>
+
+        <item name="colorSwitchTrackChecked">@color/switch_track_checked_night</item>
+        <item name="colorSwitchTrackUnchecked">@color/switch_track_unchecked_night</item>
+        <item name="colorSwitchThumbChecked">@color/switch_thumb_checked_night</item>
+        <item name="colorSwitchThumbUnchecked">@color/switch_thumb_unchecked_night</item>
 
 
     </style>
@@ -22,32 +28,5 @@
 
     </style>
 
-    <style name="screen_header">
-
-        <item name="android:layout_width">200dp</item>
-        <item name="android:layout_height">wrap_content</item>
-
-        <item name="android:background">"?attr/colorSecondary"</item>
-
-
-        <item name="titleTextColor">@color/white</item>
-        <item name="android:fontFamily">@font/ys_display_medium</item>
-        <item name="android:textFontWeight">500</item>
-
-        <item name="navigationIconTint">@color/white</item>
-
-    </style>
-
-    <style name="settingsSwitch">
-
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">@dimen/activity_settings_padding_20dp</item>
-        <item name="android:paddingEnd">7dp</item>
-        <item name="tint">@color/white</item>
-
-
-
-    </style>
 
 </resources>

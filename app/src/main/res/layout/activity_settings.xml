@@ -15,12 +15,9 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/settings_header"
-
         app:navigationIcon="@drawable/back"
-
         app:title="@string/settings"
-        style="@style/screen_header"
-        />
+        style="@style/screen_header"/>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -43,7 +40,7 @@
             />
 
         <Switch
-
+            android:checked="true"
             tools:ignore="UseSwitchCompatOrMaterialXml"
             style="@style/settingsSwitch"
             android:layout_width="match_parent"
