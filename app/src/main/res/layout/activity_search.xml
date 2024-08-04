@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
@@ -10,27 +9,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorSecondary"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/settings_header"
+        style="@style/screen_header"
         app:navigationIcon="@drawable/back"
-        app:title="@string/search"
-        style="@style/screen_header"/>
+        app:title="@string/search" />
 
     <LinearLayout
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="horizontal">
 
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/search"
-            android:padding="@dimen/padding_16dp"
             android:background="@android:color/transparent"
             android:drawableStart="@drawable/little_search"
+            android:hint="@string/search"
+            android:padding="@dimen/padding_16dp" />
 
+    </LinearLayout>
 </LinearLayout>
