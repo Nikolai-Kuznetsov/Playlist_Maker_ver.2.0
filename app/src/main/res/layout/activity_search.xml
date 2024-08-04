@@ -19,9 +19,18 @@
         app:title="@string/search"
         style="@style/screen_header"/>
 
-    <FrameLayout
+    <LinearLayout
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground" />
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/search"
+            android:padding="@dimen/padding_16dp"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/little_search"
 
 </LinearLayout>

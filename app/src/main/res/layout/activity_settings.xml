@@ -40,7 +40,6 @@
             />
 
         <Switch
-            android:checked="true"
             tools:ignore="UseSwitchCompatOrMaterialXml"
             style="@style/settingsSwitch"
             android:layout_width="match_parent"
