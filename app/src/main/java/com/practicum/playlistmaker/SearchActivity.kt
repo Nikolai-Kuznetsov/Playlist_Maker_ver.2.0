@@ -4,11 +4,9 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.view.inputmethod.InputMethod
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 
@@ -16,6 +14,7 @@ class SearchActivity : AppCompatActivity() {
 
     private lateinit var searchBox: EditText
     private lateinit var clearButton: ImageView
+    private var searchText: String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +34,7 @@ class SearchActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                // Этот метод вызывается при изменении текста
+                searchText = s.toString()
                 clearButton.visibility = if (s.isNullOrEmpty()) {
                     View.GONE
                 } else {
@@ -51,6 +50,18 @@ class SearchActivity : AppCompatActivity() {
             searchBox.text.clear()
 
         }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("SEARCH_TEXT", searchText)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        searchText = savedInstanceState.getString("SEARCH_TEXT", "")
+        searchBox.setText(searchText)
+        super.onRestoreInstanceState(savedInstanceState)
     }
 
     private fun hideKeyboard() {
