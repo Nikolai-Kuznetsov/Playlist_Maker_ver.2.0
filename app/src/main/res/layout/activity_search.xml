@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/settings"
-    tools:context=".SearchActivity"
-
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
     android:background="?attr/colorSecondary"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".SearchActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/search_header"
@@ -18,14 +18,14 @@
         app:title="@string/search" />
 
     <LinearLayout
+        style="@drawable/search_box_radius_background"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="@dimen/search_box_start_and_end_16dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="@dimen/search_box_start_and_end_16dp"
         android:background="@drawable/search_box_radius_background"
-        style="@drawable/search_box_radius_background">
+        android:orientation="horizontal">
 
         <EditText
             android:id="@+id/search_box"
@@ -35,11 +35,11 @@
             android:layout_weight="1"
             android:drawablePadding="8dp"
             android:hint="@string/search"
-            android:text=""
-            android:textCursorDrawable="@drawable/cursor_color"
             android:inputType="text"
             android:maxLines="1"
-            android:padding="@dimen/padding_16dp" />
+            android:padding="@dimen/padding_16dp"
+            android:text=""
+            android:textCursorDrawable="@drawable/cursor_color" />
 
         <ImageView
             android:id="@+id/clear_button"

@@ -15,8 +15,6 @@
         <item name="colorSwitchTrackUnchecked">@color/switch_track_unchecked_night</item>
         <item name="colorSwitchThumbChecked">@color/switch_thumb_checked_night</item>
         <item name="colorSwitchThumbUnchecked">@color/switch_thumb_unchecked_night</item>
-
-
     </style>
 
     <style name="settingsIcon">
@@ -26,14 +24,13 @@
         <item name="android:padding">@dimen/activity_settings_padding_20dp</item>
     </style>
 
-    <style name="CustomEditText" parent="Widget.MaterialComponents.TextInputEditText.FilledBox">
-        <item name="android:textSize">@dimen/text_size_16px</item>
-        <item name="android:fontFamily">@font/ys_display_regular</item>
-        <item name="android:textColor">@color/grey</item>
-    </style>
-
     <style name="search_icon_and_text">
         <item name="android:drawableStart">@drawable/little_search_dark</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_16px</item>
+        <item name="android:fontFamily">@font/ys_display_regular</item>
     </style>
 
 </resources>
