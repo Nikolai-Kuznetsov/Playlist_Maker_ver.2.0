@@ -36,6 +36,7 @@
             android:drawablePadding="8dp"
             android:hint="@string/search"
             android:text=""
+            android:textCursorDrawable="@drawable/cursor_color"
             android:inputType="text"
             android:maxLines="1"
             android:padding="@dimen/padding_16dp" />
