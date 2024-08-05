@@ -19,12 +19,11 @@ class SettingsActivity : AppCompatActivity() {
         val supportButton = findViewById<LinearLayout>(R.id.email_for_support)
         val termsOfUseButton = findViewById<LinearLayout>(R.id.terms_of_use)
 
-        // Исправление 1: Замена setOnClickListener на setNavigationOnClickListener для корректной работы кнопки "Назад"
         backButton.setNavigationOnClickListener {
             finish()
         }
 
-        // Обработчик нажатия для кнопки "Поделиться приложением"
+
         shareAppButton.setOnClickListener {
             val shareIntent = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
@@ -37,7 +36,7 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-        // Обработчик нажатия для кнопки "Поддержка"
+
         supportButton.setOnClickListener {
             val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
                 data = Uri.parse("mailto:NikolaiBhairava@yandex.ru")
@@ -51,7 +50,7 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-        // Обработчик нажатия для кнопки "Условия использования"
+
         termsOfUseButton.setOnClickListener {
             val termsOfUseIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://yandex.ru/legal/practicum_offer/"))
             try {

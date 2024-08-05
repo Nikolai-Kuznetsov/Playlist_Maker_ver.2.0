@@ -20,6 +20,6 @@
     <color name="switch_track_checked_night">#9FBBF3</color>
     <color name="switch_track_unchecked_night">#9FBBF3</color>
 
-
+    <color name="search_box_background">#E6E8EB</color>
 
 </resources>

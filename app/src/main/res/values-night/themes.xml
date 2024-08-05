@@ -20,13 +20,18 @@
     </style>
 
     <style name="settingsIcon">
-
         <item name="tint">@color/white</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">@dimen/activity_settings_padding_20dp</item>
-
     </style>
 
+    <style name="search_box_background">
+        <item name="android:background">@drawable/search_box_radius_background</item>
+    </style>
+
+    <style name="search_icon_and_text">
+        <item name="android:drawableStart">@drawable/little_search_dark</item>
+    </style>
 
 </resources>

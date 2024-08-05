@@ -9,5 +9,7 @@
     <dimen name="activity_settings_padding_20dp">20dp</dimen>
     <dimen name="corner_radius_16dp">16dp</dimen>
     <dimen name="padding_16dp">16dp</dimen>
+    <dimen name="corner_radius_8dp">8dp</dimen>
+    <dimen name="search_box_start_and_end_16dp">16dp</dimen>
 
 </resources>
