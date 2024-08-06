@@ -50,7 +50,12 @@ class SettingsActivity : AppCompatActivity() {
                 putExtra(Intent.EXTRA_TEXT, getString(R.string.share_app_url))
             }
             try {
-                startActivity(Intent.createChooser(shareIntent, getString(R.string.messenger_success)))
+                startActivity(
+                    Intent.createChooser(
+                        shareIntent,
+                        getString(R.string.messenger_success)
+                    )
+                )
             } catch (e: ActivityNotFoundException) {
                 Toast.makeText(this, getString(R.string.no_messenger), Toast.LENGTH_LONG).show()
             }
@@ -70,7 +75,8 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         termsOfUseButton.setOnClickListener {
-            val termsOfUseIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.terms_of_use_url)))
+            val termsOfUseIntent =
+                Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.terms_of_use_url)))
             try {
                 startActivity(termsOfUseIntent)
             } catch (e: ActivityNotFoundException) {
