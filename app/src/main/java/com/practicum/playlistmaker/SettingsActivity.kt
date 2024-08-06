@@ -27,36 +27,36 @@ class SettingsActivity : AppCompatActivity() {
         shareAppButton.setOnClickListener {
             val shareIntent = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
-                putExtra(Intent.EXTRA_TEXT, "https://practicum.yandex.ru/android-developer/")
+                putExtra(Intent.EXTRA_TEXT, getString(R.string.share_app_url))
             }
             try {
-                startActivity(Intent.createChooser(shareIntent, "Делимся счастьем!"))
+                startActivity(Intent.createChooser(shareIntent, getString(R.string.messenger_success)))
             } catch (e: ActivityNotFoundException) {
-                Toast.makeText(this, "У вас не установлен мессенджер:(\n\nУстановите любой мессенджер, чтобы поделиться нашим приложением.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.no_messenger), Toast.LENGTH_LONG).show()
             }
         }
 
 
         supportButton.setOnClickListener {
             val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
-                data = Uri.parse("mailto:NikolaiBhairava@yandex.ru")
-                putExtra(Intent.EXTRA_SUBJECT, "Сообщение разработчикам и разработчицам приложения Playlist Maker")
-                putExtra(Intent.EXTRA_TEXT, "Спасибо разработчикам и разработчицам за крутое приложение!")
+                data = Uri.parse("mailto:${getString(R.string.email_address)}")
+                putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject))
+                putExtra(Intent.EXTRA_TEXT, getString(R.string.email_body))
             }
             try {
                 startActivity(emailIntent)
             } catch (e: ActivityNotFoundException) {
-                Toast.makeText(this, "У вас не установлен почтовый клиент:(\n\nУстановите любой почтовый клиент, чтобы написать в службу поддержки.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.no_email_client), Toast.LENGTH_LONG).show()
             }
         }
 
 
         termsOfUseButton.setOnClickListener {
-            val termsOfUseIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://yandex.ru/legal/practicum_offer/"))
+            val termsOfUseIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.terms_of_use_url)))
             try {
                 startActivity(termsOfUseIntent)
             } catch (e: ActivityNotFoundException) {
-                Toast.makeText(this, "У вас не установлен браузер:(\n\nУстановите любой браузер, чтобы прочитать пользовательское соглашение.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.no_browser), Toast.LENGTH_LONG).show()
             }
         }
     }
