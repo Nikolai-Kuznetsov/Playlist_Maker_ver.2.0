@@ -16,6 +16,9 @@ class SearchActivity : AppCompatActivity() {
     private lateinit var clearButton: ImageView
     private var searchText: String = ""
 
+    companion object {
+        private const val SEARCH_TEXT_KEY = "SEARCH_TEXT"
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,8 +33,7 @@ class SearchActivity : AppCompatActivity() {
         }
 
         searchBox.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 searchText = s.toString()
@@ -42,30 +44,27 @@ class SearchActivity : AppCompatActivity() {
                 }
             }
 
-            override fun afterTextChanged(s: Editable?) {
-            }
+            override fun afterTextChanged(s: Editable?) {}
         })
 
         clearButton.setOnClickListener {
             searchBox.text.clear()
+            hideKeyboard()
+        }
 
+        if (savedInstanceState != null) {
+            searchText = savedInstanceState.getString(SEARCH_TEXT_KEY, "")
+            searchBox.setText(searchText)
         }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString("SEARCH_TEXT", searchText)
-    }
-
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        searchText = savedInstanceState.getString("SEARCH_TEXT", "")
-        searchBox.setText(searchText)
-        super.onRestoreInstanceState(savedInstanceState)
+        outState.putString(SEARCH_TEXT_KEY, searchText)
     }
 
     private fun hideKeyboard() {
         val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(searchBox.windowToken,0)
+        imm.hideSoftInputFromWindow(searchBox.windowToken, 0)
     }
 }
