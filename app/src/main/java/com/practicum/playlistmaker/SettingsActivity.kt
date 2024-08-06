@@ -92,3 +92,4 @@ class SettingsActivity : AppCompatActivity() {
         return sharedPreferences.getBoolean("dark_mode", false)
     }
 }
+
