@@ -16,10 +16,6 @@ class SearchActivity : AppCompatActivity() {
     private lateinit var clearButton: ImageView
     private var searchText: String = ""
 
-    companion object {
-        private const val SEARCH_TEXT_KEY = "SEARCH_TEXT"
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
@@ -70,7 +66,12 @@ class SearchActivity : AppCompatActivity() {
     }
 
     private fun hideKeyboard() {
-        val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(searchBox.windowToken, 0)
+        val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(searchBox.windowToken, 0)
     }
+
+    companion object {
+        private const val SEARCH_TEXT_KEY = "SEARCH_TEXT"
+    }
+
 }

@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val buttonSearch = findViewById<Button>(R.id.button_search)
-        val buttonLibrary = findViewById<Button>(R.id.button_library)
         val buttonSettings = findViewById<Button>(R.id.button_settings)
 
         buttonSearch.setOnClickListener {

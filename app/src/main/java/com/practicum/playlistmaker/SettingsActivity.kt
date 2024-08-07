@@ -32,10 +32,8 @@ class SettingsActivity : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("theme_prefs", Context.MODE_PRIVATE)
 
-        // Установите состояние переключателя в соответствии с текущей темой
         themeSwitch.isChecked = isDarkMode()
 
-        // Исправлено: setOnClickListener не принимает аргументы. Используйте только лямбду без параметров.
         themeSwitch.setOnCheckedChangeListener { _: CompoundButton, isChecked: Boolean ->
             setDarkMode(isChecked)
         }
