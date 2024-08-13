@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/linearLayoutMenuSettings"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginStart="5dp">
+
+    <ImageView
+        style="@style/cover_style"
+        android:contentDescription="@string/album_cover"
+        android:src="@drawable/text_cover"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14dp"
+        android:layout_weight="1"
+        >
+
+        <TextView
+            style="@style/track_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Smells Like Teen Spirit" />
+
+        <TextView
+            style="@style/artist_and_time_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/terms_of_use"
+            tools:text="Nirvana · 5:01"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        style="@style/settingsIcon"
+        android:src="@drawable/arrow_forward"
+        />
+
+</LinearLayout>
+
