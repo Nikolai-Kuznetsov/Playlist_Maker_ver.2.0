@@ -23,12 +23,14 @@
         >
 
         <TextView
+            android:id="@+id/track_name"
             style="@style/track_name_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Smells Like Teen Spirit" />
 
         <TextView
+            android:id="@+id/arist_and_time"
             style="@style/artist_and_time_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,9 +38,11 @@
             tools:text="Nirvana · 5:01"
             />
 
+
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/cover"
         style="@style/settingsIcon"
         android:src="@drawable/arrow_forward"
         />

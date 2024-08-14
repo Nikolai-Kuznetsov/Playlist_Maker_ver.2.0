@@ -1,6 +1,5 @@
 package com.practicum.playlistmaker
 
 class Track (val trackName: String,
-             val artistName: String,
-             val trackTime: String,
+             val artistNameAndTime: String,
              val artworkUrl100: String)
