@@ -4,6 +4,7 @@ import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.bumptech.glide.Glide
 
 
 class SearchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -21,6 +22,9 @@ class SearchViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(model: Track) {
         trackNameView.text = model.trackName
         artistNameAndTimeView.text = model.artistNameAndTime
-    }
 
+        Glide.with(itemView.context)
+            .load(model.artworkUrl100)
+            .into(artworkUrl100View)
+    }
 }

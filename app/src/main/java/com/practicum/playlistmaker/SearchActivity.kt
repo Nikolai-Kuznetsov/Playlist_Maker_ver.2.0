@@ -1,5 +1,6 @@
 package com.practicum.playlistmaker
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -11,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class SearchActivity : AppCompatActivity() {
 
@@ -18,6 +20,7 @@ class SearchActivity : AppCompatActivity() {
     private lateinit var clearButton: ImageView
     private var searchText: String = ""
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
@@ -55,7 +58,7 @@ class SearchActivity : AppCompatActivity() {
             searchBox.setText(searchText)
         }
 
-        // Инициализация RecyclerView и TrackAdapter
+
         val recycler = findViewById<RecyclerView>(R.id.trackList)
         val tracks = arrayListOf(
             Track(
@@ -87,7 +90,11 @@ class SearchActivity : AppCompatActivity() {
 
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.adapter = TrackAdapter(tracks)
+
+
     }
+
+
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
