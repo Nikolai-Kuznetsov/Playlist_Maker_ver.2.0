@@ -3,11 +3,13 @@
 
     <dimen name="text_size_16px">16sp</dimen>
     <dimen name="text_size_22px">22sp</dimen>
-    <dimen name="space_between_icon_and_text">8sp</dimen>
-    <dimen name="space_between_buttons">8dp</dimen>
-    <dimen name="activity_settings_padding_start">18dp</dimen>
-    <dimen name="activity_settings_padding">20dp</dimen>
+    <dimen name="space_between_icon_and_text_8sp">8sp</dimen>
+    <dimen name="space_between_buttons_8dp">8dp</dimen>
+    <dimen name="activity_settings_padding_start_16dp">16dp</dimen>
+    <dimen name="activity_settings_padding_20dp">20dp</dimen>
     <dimen name="corner_radius_16dp">16dp</dimen>
     <dimen name="padding_16dp">16dp</dimen>
+    <dimen name="corner_radius_8dp">8dp</dimen>
+    <dimen name="search_box_start_and_end_16dp">16dp</dimen>
 
 </resources>
